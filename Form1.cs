@@ -11,7 +11,6 @@ namespace KLab1
         {
             InitializeComponent();
             dbService = new DatabaseService();
-           // dbService.CreateStoredProcedureIfNotExists();  
             LoadAllData();
         }
 
@@ -80,27 +79,26 @@ namespace KLab1
             dataGridViewBooks.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewBooks.ReadOnly = false;
 
-            // Загружаем данные сначала
+          
             booksDataSet = dbService.GetBooksWithAuthors();
             dataGridViewBooks.DataSource = booksDataSet.Tables[0];
 
-            // Убираем лишние колонки и переименовываем
+            
             ConfigureBooksColumns();
 
             // Настраиваем выпадающий список для авторов
             SetupAuthorComboBoxColumn();
         }
 
-        // Настройка колонок для книг
+        
         private void ConfigureBooksColumns()
         {
-            // Сначала скрываем все колонки
+            
             foreach (DataGridViewColumn column in dataGridViewBooks.Columns)
             {
                 column.Visible = false;
             }
 
-            // Показываем только нужные колонки и переименовываем их
             if (dataGridViewBooks.Columns.Contains("BookID"))
             {
                 dataGridViewBooks.Columns["BookID"].Visible = true;
@@ -139,22 +137,22 @@ namespace KLab1
             }
         }
 
-        // Настройка выпадающего списка авторов
+       
         private void SetupAuthorComboBoxColumn()
         {
-            // Создаем колонку ComboBox для авторов
+          
             DataGridViewComboBoxColumn authorColumn = new DataGridViewComboBoxColumn();
             authorColumn.HeaderText = "Автор";
-            authorColumn.DataPropertyName = "AuthorID"; // Связываем с AuthorID
+            authorColumn.DataPropertyName = "AuthorID"; 
             authorColumn.Name = "AuthorColumn";
             authorColumn.DisplayMember = "Name";
             authorColumn.ValueMember = "AuthorID";
             authorColumn.Width = 150;
 
-            // Заполняем данными авторов
+            
             authorColumn.DataSource = dbService.GetAuthorsForComboBox();
 
-            // Добавляем колонку
+            
             dataGridViewBooks.Columns.Add(authorColumn);
         }
 
@@ -242,7 +240,7 @@ namespace KLab1
                 if (result == DialogResult.Yes)
                 {
                     dbService.DeleteAuthor(authorId);
-                    LoadAuthorsData(); // Перезагружаем данные
+                    LoadAuthorsData(); 
                     MessageBox.Show("Автор успешно удален");
                 }
             }
@@ -256,7 +254,7 @@ namespace KLab1
         {
             try
             {
-                // Проверяем обязательные поля
+               
                 foreach (DataRow row in authorsDataSet.Tables[0].Rows)
                 {
                     if (row.RowState == DataRowState.Added || row.RowState == DataRowState.Modified)
@@ -272,7 +270,7 @@ namespace KLab1
                 dbService.SaveAuthorsChanges(authorsDataSet);
                 MessageBox.Show("Изменения успешно сохранены");
 
-                // Обновляем данные
+               
                 LoadAuthorsData();
             }
             catch (Exception ex)
@@ -339,7 +337,7 @@ namespace KLab1
         {
             try
             {
-                // Проверяем обязательные поля
+               
                 foreach (DataRow row in booksDataSet.Tables[0].Rows)
                 {
                     if (row.RowState == DataRowState.Added || row.RowState == DataRowState.Modified)
@@ -380,17 +378,17 @@ namespace KLab1
             {
                 string selectedCountry = comboCountries.SelectedItem.ToString();
 
-                // Используем подключенный режим (DataReader)
+               
                 DataTable result = dbService.GetBooksByAuthorCountry(selectedCountry);
 
-                // Отображаем результаты
+               
                 dataGridViewQueryResults.DataSource = result;
 
-                // Настраиваем внешний вид таблицы
+               
                 dataGridViewQueryResults.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridViewQueryResults.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-                // Показываем количество найденных книг
+               
                 MessageBox.Show($"Найдено {result.Rows.Count} книг авторов из {selectedCountry}");
             }
             catch (Exception ex)
@@ -409,14 +407,14 @@ namespace KLab1
 
             try
             {
-                // Парсим выбранный ценовой диапазон
+                
                 string priceRange = comboPriceRange.SelectedItem.ToString();
                 decimal minPrice = 0, maxPrice = 0;
 
                 if (priceRange.Contains("+"))
                 {
                     minPrice = decimal.Parse(priceRange.Replace(" руб.", "").Replace("+", ""));
-                    maxPrice = 100000; // Большое число для "и выше"
+                    maxPrice = 100000; 
                 }
                 else
                 {
@@ -425,16 +423,16 @@ namespace KLab1
                     maxPrice = decimal.Parse(prices[1]);
                 }
 
-                // Парсим выбранный годовой диапазон
+            
                 string yearRange = comboYearRange.SelectedItem.ToString();
                 string[] years = yearRange.Split('-');
                 int startYear = int.Parse(years[0]);
                 int endYear = int.Parse(years[1]);
 
-                // Вызываем хранимую процедуру (ОТКЛЮЧЕННЫЙ РЕЖИМ - DataSet)
+                // отключенный доступ через dataset
                 DataTable result = dbService.GetBooksByPriceAndYear(minPrice, maxPrice, startYear, endYear);
 
-                // Переименовываем колонки на русский
+               
                 if (result.Columns.Count >= 5)
                 {
                     result.Columns["book_title"].ColumnName = "Название книги";
@@ -444,21 +442,20 @@ namespace KLab1
                     result.Columns["book_year"].ColumnName = "Год издания";
                 }
 
-                // Отображаем результаты
+                
                 dataGridViewProcedureResults.DataSource = result;
 
-                // Настраиваем внешний вид таблицы
+               
                 dataGridViewProcedureResults.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridViewProcedureResults.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-                // Форматируем цену
                 if (dataGridViewProcedureResults.Columns.Contains("Цена"))
                 {
                     dataGridViewProcedureResults.Columns["Цена"].DefaultCellStyle.Format = "N2";
                     dataGridViewProcedureResults.Columns["Цена"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 }
 
-                // Показываем количество найденных книг
+              
                 MessageBox.Show($"Найдено {result.Rows.Count} книг по выбранным критериям");
             }
             catch (Exception ex)

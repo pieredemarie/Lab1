@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "D:\\UniversityFiles\\3KURS\\KPO\\KLab1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7572B378-3E0C-4EB9-980B-7D046D45250F}|KLab1.csproj|D:\\UniversityFiles\\3KURS\\KPO\\KLab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7572B378-3E0C-4EB9-980B-7D046D45250F}|KLab1.csproj|d:\\universityfiles\\3kurs\\kpo\\klab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7572B378-3E0C-4EB9-980B-7D046D45250F}|KLab1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7572B378-3E0C-4EB9-980B-7D046D45250F}|KLab1.csproj|d:\\universityfiles\\3kurs\\kpo\\klab1\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7572B378-3E0C-4EB9-980B-7D046D45250F}|KLab1.csproj|D:\\UniversityFiles\\3KURS\\KPO\\KLab1\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7572B378-3E0C-4EB9-980B-7D046D45250F}|KLab1.csproj|solutionrelative:databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,13 +54,26 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\UniversityFiles\\3KURS\\KPO\\KLab1\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\UniversityFiles\\3KURS\\KPO\\KLab1\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAGYBAAAAAAAAAAAgwMkBAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T17:56:39.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "DatabaseService.cs",
               "DocumentMoniker": "D:\\UniversityFiles\\3KURS\\KPO\\KLab1\\DatabaseService.cs",
               "RelativeDocumentMoniker": "DatabaseService.cs",
               "ToolTip": "D:\\UniversityFiles\\3KURS\\KPO\\KLab1\\DatabaseService.cs",
               "RelativeToolTip": "DatabaseService.cs",
-              "ViewState": "AQIAAMEAAAAAAAAAAAAAAO8AAAAJAAAA",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAzwG8AAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-20T18:03:26.088Z",
               "EditorCaption": ""
@@ -87,21 +100,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T17:59:12.563Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\UniversityFiles\\3KURS\\KPO\\KLab1\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "D:\\UniversityFiles\\3KURS\\KPO\\KLab1\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T17:56:39.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-20T17:59:12.563Z"
             },
             {
               "$type": "Document",
@@ -113,8 +112,7 @@
               "RelativeToolTip": "App.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-09-20T17:45:39.967Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-20T17:45:39.967Z"
             },
             {
               "$type": "Document",
@@ -126,8 +124,7 @@
               "RelativeToolTip": "KLab1.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-20T16:39:38.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-20T16:39:38.291Z"
             },
             {
               "$type": "Document",
@@ -139,8 +136,7 @@
               "RelativeToolTip": "Form1.Designer.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAAABYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T16:39:30.165Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-20T16:39:30.165Z"
             },
             {
               "$type": "Document",
@@ -151,8 +147,7 @@
               "ToolTip": "D:\\UniversityFiles\\3KURS\\KPO\\KLab1\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "RelativeToolTip": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T15:39:14.273Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+              "WhenOpened": "2025-09-14T15:39:14.273Z"
             }
           ]
         }
