@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KLab1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ad9893615b7fb4bc6234535ac98173d748c0416")]
 [assembly: System.Reflection.AssemblyProductAttribute("KLab1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KLab1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
